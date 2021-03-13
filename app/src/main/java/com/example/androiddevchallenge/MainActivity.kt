@@ -16,7 +16,6 @@
 package com.example.androiddevchallenge
 
 import android.os.Bundle
-import android.provider.ContactsContract
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.material.MaterialTheme
@@ -68,8 +67,6 @@ fun DarkPreview() {
 fun App() {
     val navController = rememberNavController()
     NavHost(navController, startDestination = "welcomFragment") {
-        composable("welcomFragment") {  }
-
-
+        composable("welcomFragment") { }
     }
 }
