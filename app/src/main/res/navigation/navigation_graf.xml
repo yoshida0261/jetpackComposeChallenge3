@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation_graf"
+    app:startDestination="@id/welcomFragment">
+
+    <fragment
+        android:id="@+id/welcomFragment"
+        android:name="com.example.androiddevchallenge.WelcomFragment"
+        android:label="WelcomFragment" >
+        <action
+            android:id="@+id/action_welcomFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.androiddevchallenge.LoginFragment"
+        android:label="LoginFragment" />
+</navigation>
