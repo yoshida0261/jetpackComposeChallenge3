@@ -10,4 +10,5 @@
       the License.
       -->
     <string name="app_name">ADC3</string>
+    <string name="title_activity_home">Home</string>
 </resources>

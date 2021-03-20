@@ -62,3 +62,15 @@ fun MyTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable() (
         content = content
     )
 }
+
+@Composable
+fun NavComposeTheme(
+    content: @Composable () -> Unit
+) {
+    MaterialTheme(
+        colors = LightColorPalette,
+        typography = typography,
+        shapes = shapes,
+        content = content
+    )
+}
