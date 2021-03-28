@@ -16,33 +16,27 @@
 package com.example.androiddevchallenge.view
 
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material.Button
-import androidx.compose.material.Text
+import androidx.compose.foundation.layout.*
+import androidx.compose.material.*
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.example.androiddevchallenge.R
 import com.example.androiddevchallenge.ui.theme.pink900
+import com.example.androiddevchallenge.ui.theme.white
 
 @Composable
 fun welcome(action: () -> Unit) {
-    Image(
-        contentScale = ContentScale.FillBounds,
-        painter = painterResource(R.drawable.ic_light_welcome_bg),
-        contentDescription = "background"
-    )
+    WelcomeBackground()
+
     Column(
-        modifier = Modifier
-            .padding(top = 72.dp)
-            .background(pink900)
-    ) {
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally,
+
+        ) {
 
         Image(
             painter = painterResource(id = R.drawable.ic_light_welcome_illos),
@@ -61,13 +55,31 @@ fun welcome(action: () -> Unit) {
                 .padding(bottom = 40.dp)
                 .height(32.dp)
         )
-        Button(onClick = action, modifier = Modifier.fillMaxWidth()) {
+        Button(onClick = {/* Todo */}, modifier = Modifier.fillMaxWidth()) {
             Text("Create account")
         }
-        Text(text = "Log in")
-
-
+        TextButton(onClick = action, modifier = Modifier.padding(top = 24.dp)) {
+            Text(text = "Log in",
+            style = MaterialTheme.typography.button,
+            color = if(MaterialTheme.colors.isLight) pink900 else white)
+        }
     }
+}
 
+@Composable
+fun WelcomeBackground() {
+
+    Surface(
+        modifier = Modifier
+            .fillMaxHeight()
+            .fillMaxWidth(),
+        color = MaterialTheme.colors.primary
+    ) {
+        Image(
+            painter = painterResource(id = R.drawable.ic_light_welcome_bg),
+            contentDescription = "bloom_bg",
+            contentScale = ContentScale.Crop
+        )
+    }
 
 }
