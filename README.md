@@ -1,3 +1,10 @@
+# 進捗駄目です
+
+
+<img src="https://user-images.githubusercontent.com/6377215/114918448-0c94e400-9e62-11eb-9b8c-041266f63b6b.png" width="300">
+
+
+
 # Template repository
 
 Template repository for the Jetpack Compose [#AndroidDevChallenge](https://developer.android.com/dev-challenge).
